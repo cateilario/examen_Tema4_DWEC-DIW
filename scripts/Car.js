@@ -1,4 +1,44 @@
+import { showResult } from "./main.js";
 
+export class Car {
+    #brand;
+    #model;
+    #color;
+    #creation;
+    #displacement;
+
+    constructor(brand, model, color, creation, displacement) {
+        this.#brand = brand;
+        this.#model = model;
+        this.#color = color;
+        this.#creation = creation;
+        this.#displacement = displacement;
+    }
+
+    showDetails (){
+        const data = ` 
+            Marca: ${this.#brand} <br/>
+            Modelo: ${this.#model} <br/>
+            Color: ${this.#color} <br/>
+            Fabricación: ${this.#creation} <br/>
+            Cilindrada ${this.#displacement} <br/>
+        `
+        showResult(data);
+    }
+
+    speedUp(speed){
+        const message = `El vehículo ha acelerado hasta ${speed}`
+
+        showResult(message);
+    }
+
+    start() {
+        const message = `El vehículo con marca ${this.#brand} ha arrancado.`
+  
+        showResult(message)
+    }
+
+}
 
 
 

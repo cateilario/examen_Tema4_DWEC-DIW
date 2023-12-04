@@ -1,44 +1,51 @@
-import { Padre } from "./Padre.js";
-import { Hijo1 } from "./Hijo1.js";
-import { Hijo2 } from "./Hijo2.js";
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+import { Car } from "./Car.js";
+import { SportCar } from "./SportCar.js";
 
 const resultContainer = document.getElementById("content")
 
 export const showResult = message => {
     resultContainer.innerHTML += `<p>${message}</p>`;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Creación de instancias de la clase ...
 const fourwheel1 = new Pickup('BMW', 'X5', 'Negro', 2018, '3000', true);
