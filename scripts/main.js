@@ -28,8 +28,10 @@ const carObject = {
     displacement: '2400'
 }
 
+// Guardar objeto
 localStorage.setItem("vehiculo", JSON.stringify(carObject));
 
+// Recuperación objeto
 console.log(JSON.parse(localStorage.getItem("vehiculo")));
 
 // Creación instancia de Coche Deportivo:
@@ -50,7 +52,6 @@ document.body.appendChild(sportiveCarImg);
 
 
 // Almacenamiento en localStorage:
-
 const sportiveCarObject = {
     brand: sportiveCar1.brand,
     model: sportiveCar1.model,

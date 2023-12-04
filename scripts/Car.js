@@ -28,19 +28,16 @@ export class Car {
 
     speedUp(speed){
         const message = `El vehículo ha acelerado hasta ${speed} km/h.<br/>`
-
         showResult(message);
     }
 
     start() {
         const message = `El vehículo con marca ${this.#brand}, ha arrancado. <br/>`
-  
         showResult(message);
     }
 
     slowDown(){
         const message = `El vehículo con marca ${this.#brand}, ha frenado. <br/>`;
-    
         showResult(message);
     }
 

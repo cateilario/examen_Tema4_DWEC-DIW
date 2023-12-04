@@ -9,8 +9,9 @@ export class SportiveCar extends Car {
         this.#enginePower = enginePower
     }
 
-    sportiveMode(){
+    sportiveModeOn(){
         const message = `El modo deportivo del coche ${this.brand}, modelo ${this.model} se ha activado. <br/>`
+        showResult(message);
     }
 
     get enginePower(){

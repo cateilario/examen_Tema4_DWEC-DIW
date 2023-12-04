@@ -19,8 +19,17 @@ h1{
 }
 
 @keyframes change-color {
-    from { background: #7c7c7afa; }  /* Primer fotograma */
-    to { background: #383938fd; }  /* Segundo y último fotograma */
+    from { background: #4c4cacfa; }  /* Primer fotograma */
+    to { background: #5a5c5cfd; }  /* Segundo y último fotograma */
+}
+
+h2{
+    transition:cubic-bezier(0.075, 0.82, 0.165, 1);
+    color: #4e4e4f;
+}
+
+h2:hover{
+    
 }
 
 body{
