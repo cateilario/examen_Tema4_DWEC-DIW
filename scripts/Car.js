@@ -20,8 +20,8 @@ export class Car {
             Marca: ${this.#brand} <br/>
             Modelo: ${this.#model} <br/>
             Color: ${this.#color} <br/>
-            Fabricación: año ${this.#creation} <br/>
-            Cilindrada ${this.#displacement} <br/>
+            Año de abricación: ${this.#creation} <br/>
+            Cilindrada: ${this.#displacement} <br/>
         `
         showResult(data);
     }
