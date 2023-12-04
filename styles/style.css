@@ -30,11 +30,12 @@ h2{
     color: #3d3d3e;
     font-size: 1.5rem;
     font-weight: 1000;
-    transition: transform .2s;
+    transition: transform .3s;
 }
 
+/*Pseudoselector*/
 h2:hover{
-    transform: scale(2.5);
+    transform: scale(1.2);
 }
 
 
@@ -56,16 +57,33 @@ section{
     text-align: center;
     border-radius: 1rem;
     background: #a7a5a5;
-    background: linear-gradient(to right, rgb(217, 216, 216) 0%, rgb(194, 193, 193) 34%, rgb(172, 171, 171) 73%, rgba(235,235,235,1) 100%);
-    box-shadow: 10px 15px 15px 10px grey;
+    background: linear-gradient(to right, rgb(217, 216, 216) 0%, rgb(194, 193, 193) 34%, rgb(172, 171, 171) 73%, rgb(216, 214, 214) 100%);
+    box-shadow: 5px 10px 10px 8px #656464;
+    opacity: 0.8;
 }
 
 .sportive-car{
-    width: 150px;
-    height: 150px;
-    background-image: url();
+    width: 200px;
+    height: 200px;
+    display: block;
     background-size: cover;
     animation: moveImage 2s linear infinite;
+}
+/*Animación para desplazar imagen en eje horizontal*/
+@keyframes moveImage {
+    from {
+        transform: translateX(-100);
+    }
+    to{
+        transform: translateX(850%);
+    }
+}
+
+.car{
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+    animation: moveImage 5s linear infinite;
 }
 /*Animación para desplazar imagen en eje horizontal*/
 @keyframes moveImage {

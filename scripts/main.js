@@ -1,3 +1,8 @@
+/**
+ * author: Caterina Ilario Paz
+ * GitHub: 
+ */
+
 import { Car } from "./Car.js";
 import { SportiveCar } from "./SportiveCar.js";
 
@@ -10,7 +15,7 @@ export const showResult = message => {
 
 // Creación de instancias de la clase Car
 // constructor(brand, model, color, creation, displacement) 
-resultContainer.innerHTML = `<h2>Nuestro coche regular</h2>`;
+resultContainer.innerHTML = `<h2>Nuestro coche base</h2>`;
 const car1 = new Car('BMW', 'CLK', 'rojo', 1992, '2400');
 
 car1.showDetails();
@@ -18,6 +23,11 @@ car1.start();
 car1.speedUp(140);
 car1.slowDown();
 
+// Creación imagen coche deportivo
+const carImg = document.createElement('img')
+carImg.src = '/assets/coche.png';
+carImg.classList.add('car');
+document.body.appendChild(carImg);
 
 // Almacenamiento en localStorage
 const carObject = {
@@ -64,6 +74,7 @@ const sportiveCarObject = {
 // Bucle para recorrer el objeto sportiveCarObject
 for (let key in sportiveCarObject) {
     if(sportiveCarObject.hasOwnProperty(key)) { 
+        // Guardamos en el localStorage cada par clave-valor
         localStorage.setItem(key, JSON.stringify(sportiveCarObject[key]));
     }
 }
