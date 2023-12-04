@@ -33,6 +33,7 @@ console.log(JSON.parse(localStorage.getItem("vehiculo")));
 
 // Creación instancia de Coche Deportivo:
 
+
 const sportiveCar1 = new SportiveCar('Ferrari', 'Spider', 'amarillo', 2020, '4000', '500');
 
 sportiveCar1.showDetails();
@@ -40,70 +41,26 @@ sportiveCar1.start();
 sportiveCar1.speedUp(140);
 sportiveCar1.slowDown();
 
+// Almacenamiento en localStorage:
 
+const sportiveCarObject = {
+    brand: sportiveCar1.brand,
+    model: sportiveCar1.model,
+    color: sportiveCar1.color,
+    creation: sportiveCar1.creation, 
+    displacement: sportiveCar1.displacement,
+    enginePower: sportiveCar1.enginePower
+}
 
+for (let key in sportiveCarObject) {
+    if(sportiveCarObject.hasOwnProperty(key)) { 
+        localStorage.setItem(key, sportiveCarObject[key]);
+    }
+}
 
+// Eliminación propiedades del localStorage:
+localStorage.removeItem(sportiveCar1.creation);
+localStorage.removeItem(sportiveCarObject.color)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// const fourwheelObject = {
-//     brand: fourwheel1.brand,
-//     model: fourwheel1.model,
-//     color: fourwheel1.color,
-//     creation: fourwheel1.creation, 
-//     displacement: fourwheel1.displacement,
-//     traction: fourwheel1.traction
-// }
-
-// // Almacenar los datos en el localStorage mediante un bucle
-// for (let key in fourwheelObject) {
-//     if(fourwheelObject.hasOwnProperty(key)) { // va comprobando el indice
-//         localStorage.setItem(key, fourwheelObject[key]);
-//     }
-// }
-
-// // Almacenar datos - Guardar el JSON en el localStorage, haciendo la transformación de la variableObject a un string.
-// localStorage.setItem("car", JSON.stringify(carObject));
-
-// // Recuperar datos - Mostar el Object en consola del JSON que hemos guardado en el localStorage
-// console.log(JSON.parse(localStorage.getItem("car")));
-// console.log(localStorage.getItem("car")); // JSON sin transformar
+// Limpiar localStorage
+//localStorage.clear()
