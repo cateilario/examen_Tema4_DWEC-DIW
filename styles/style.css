@@ -12,28 +12,34 @@ h1{
     font-family: Merriweather;
     font-size: 3rem;
     margin: 20px auto;
+    border-radius: 1rem;
     text-align: center;
     color: white;
     animation: change-color 1.5s linear infinite;
-    padding: 2rem;
+    padding: 1.5rem;
+    width: 60%;
 }
 
+/*Animación para cambiar de color*/
 @keyframes change-color {
-    from { background: #4c4cacfa; }  /* Primer fotograma */
-    to { background: #5a5c5cfd; }  /* Segundo y último fotograma */
+    from { background: #4c4cacfa; }  
+    to { background: #5a5c5cfd; }  
 }
 
 h2{
-    transition:cubic-bezier(0.075, 0.82, 0.165, 1);
-    color: #4e4e4f;
+    color: #3d3d3e;
+    font-size: 1.5rem;
+    font-weight: 1000;
+    transition: transform .2s;
 }
 
 h2:hover{
-    
+    transform: scale(2.5);
 }
 
+
 body{
-    background-image: url('../assets/20800062.jpg');
+    background-image: url('../assets/fondo-negro.jpg');
     background-size: cover; /*Cubrir todo el body*/
     background-repeat: no-repeat; /*Imagen no se repita*/
     background-attachment: fixed; /*Hacer que la imagen esté fija*/
@@ -48,7 +54,7 @@ section{
     display: flex;
     flex-direction: column;
     text-align: center;
-    border-radius: 2%;
+    border-radius: 1rem;
     background: #d1d1d1;
     background: -moz-linear-gradient(left, rgba(209,209,209,1) 0%, rgba(201,201,201,1) 34%, rgba(191,191,191,1) 73%, rgba(235,235,235,1) 100%);
     background: -webkit-linear-gradient(left, rgba(209,209,209,1) 0%, rgba(201,201,201,1) 34%, rgba(191,191,191,1) 73%, rgba(235,235,235,1) 100%);
@@ -65,7 +71,7 @@ section{
     background-size: cover;
     animation: moveImage 2s linear infinite;
 }
-/*Mover imagen en eje horizontal*/
+/*Animación para desplazar imagen en eje horizontal*/
 @keyframes moveImage {
     from {
         transform: translateX(-100);
@@ -74,23 +80,6 @@ section{
         transform: translateX(850%);
     }
 }
-
-/*
-Animación sacudida
-sacudida{
-    animation: shake-baidu 2s ease 0s infinite;
-    }
-
-    @keyframes shake-baidu {
-        from    { transform: rotate(0deg); }
-        4%      { transform: rotate(5deg); }
-        12.5%   { transform: rotate(-5deg); }
-        21%     { transform: rotate(5deg); }
-        29%     { transform: rotate(-5deg); }
-        37.5%   { transform: rotate(5deg); }
-        46%     { transform: rotate(-5deg); }
-        50%,to  { transform: rotate(0deg); }
-    }
 
     
 
