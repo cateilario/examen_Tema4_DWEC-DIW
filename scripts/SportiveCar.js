@@ -1,7 +1,7 @@
 import { Car } from "./Car.js";
 import { showResult } from "./main.js";
 
-class SportiveCar extends Car {
+export class SportiveCar extends Car {
     #power;
 
     constructor (brand, model, color, cretion, displacement, power){
