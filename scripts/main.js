@@ -17,6 +17,31 @@ car1.start();
 car1.speedUp(140);
 car1.slowDown();
 
+// Almacenamiento en localStorage
+
+const carObject = {
+    brand: 'BMW',
+    model: 'CLK',
+    color: 'rojo',
+    creation: 1992, 
+    displacement: '2400'
+}
+
+localStorage.setItem("vehiculo", JSON.stringify(carObject));
+
+console.log(JSON.parse(localStorage.getItem("vehiculo")));
+
+// Creación instancia de Coche Deportivo:
+
+const sportiveCar1 = new SportiveCar('Ferrari', 'Spider', 'amarillo', 2020, '4000', '500');
+
+sportiveCar1.showDetails();
+sportiveCar1.start();
+sportiveCar1.speedUp(140);
+sportiveCar1.slowDown();
+
+
+
 
 
 

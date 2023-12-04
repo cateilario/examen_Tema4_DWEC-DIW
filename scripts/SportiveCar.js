@@ -2,30 +2,30 @@ import { Car } from "./Car.js";
 import { showResult } from "./main.js";
 
 export class SportiveCar extends Car {
-    #power;
+    #enginePower;
 
-    constructor (brand, model, color, cretion, displacement, power){
+    constructor (brand, model, color, cretion, displacement, enginePower){
         super(brand, model, color, cretion, displacement);
-        this.#power = power
+        this.#enginePower = enginePower
     }
 
     sportiveMode(){
         const message = `El modo deportivo del coche ${this.brand}, modelo ${this.model} se ha activado. <br/>`
     }
 
-    get power(){
-        return this.#power;
+    get enginePower(){
+        return this.#enginePower;
     }
 
-    set power(value){
-        this.#power = value;
+    set enginePower(value){
+        this.#enginePower = value;
     }
 
     showDetails(){
         // Método showDetails de la clase padre Car
         super.showDetails();
         // Agregar la información de la clase hija SportiveCar
-        const sportiveCarData = `Número de pasajeros: ${this.#power}`;
+        const sportiveCarData = `El coche ${this.brand}, con modelo ${this.model} tiene un motor con potencia ${this.#enginePower}.`;
         showResult(sportiveCarData)
     }
 }
