@@ -10,6 +10,7 @@ export const showResult = message => {
 
 // Creación de instancias de la clase Car
 // constructor(brand, model, color, creation, displacement) 
+resultContainer.innerHTML = `<h2>Nuestro coche regular</h2>`;
 const car1 = new Car('BMW', 'CLK', 'rojo', 1992, '2400');
 
 car1.showDetails();
@@ -17,8 +18,8 @@ car1.start();
 car1.speedUp(140);
 car1.slowDown();
 
-// Almacenamiento en localStorage
 
+// Almacenamiento en localStorage
 const carObject = {
     brand: 'BMW',
     model: 'CLK',
@@ -32,7 +33,7 @@ localStorage.setItem("vehiculo", JSON.stringify(carObject));
 console.log(JSON.parse(localStorage.getItem("vehiculo")));
 
 // Creación instancia de Coche Deportivo:
-
+resultContainer.innerHTML += `<h2>Nuestro coche deportivo</h2>`;
 
 const sportiveCar1 = new SportiveCar('Ferrari', 'Spider', 'amarillo', 2020, '4000', '500');
 
@@ -40,6 +41,13 @@ sportiveCar1.showDetails();
 sportiveCar1.start();
 sportiveCar1.speedUp(140);
 sportiveCar1.slowDown();
+
+// Creación imagen coche deportivo
+const sportiveCarImg = document.createElement('img')
+sportiveCarImg.src = '/assets/cochesport.png';
+sportiveCarImg.classList.add('sportive-car');
+document.body.appendChild(sportiveCarImg);
+
 
 // Almacenamiento en localStorage:
 
@@ -59,8 +67,8 @@ for (let key in sportiveCarObject) {
 }
 
 // Eliminación propiedades del localStorage:
-localStorage.removeItem(sportiveCar1.creation);
-localStorage.removeItem(sportiveCarObject.color)
+localStorage.removeItem("color");
+localStorage.removeItem("creation");
 
 // Limpiar localStorage
-//localStorage.clear()
+localStorage.clear()
