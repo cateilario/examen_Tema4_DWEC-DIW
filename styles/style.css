@@ -1,0 +1,100 @@
+@font-face {
+    font-family: Open;
+    src: url(/assets/fonts/OpenSans-Medium.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: Merriweather;
+    src: url(/assets/fonts/MerriweatherSans-Medium.ttf) format('truetype');
+}
+
+body{
+    background-image: url('../assets/20800062.jpg');
+    background-size: cover; /*Cubrir todo el body*/
+    background-repeat: no-repeat; /*Imagen no se repita*/
+    background-attachment: fixed; /*Hacer que la imagen esté fija*/
+    color: black;
+}
+
+/*Mover imagen en eje horizontal*/
+@keyframes moveImage {
+    from {
+        transform: translateX(-100);
+    }
+    to{
+        transform: translateX(850%);
+    }
+}
+.item{
+    width: 150px;
+    height: 150px;
+    background-image: url();
+    background-size: cover;
+    animation: moveImage 3s linear infinite;
+}
+
+/*Efecto escribir*/
+span{
+    display: block;
+    font-family: Inter;
+    white-space: nowrap;
+    border-right: 4px solid;
+    width: 50ch;
+    animation: typing 3s steps(50), blink 1s infinite step-end alternate;
+    /*steps: para cuantos caracteres tenemos que aplicar la animación*/
+    overflow: hidden;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+/*Animación sacudida*/
+img{
+    animation: shake-baidu 2s ease 0s infinite;
+    }
+
+    @keyframes shake-baidu {
+        from    { transform: rotate(0deg); }
+        4%      { transform: rotate(5deg); }
+        12.5%   { transform: rotate(-5deg); }
+        21%     { transform: rotate(5deg); }
+        29%     { transform: rotate(-5deg); }
+        37.5%   { transform: rotate(5deg); }
+        46%     { transform: rotate(-5deg); }
+        50%,to  { transform: rotate(0deg); }
+    }
+
+/*Cambio de color*/  
+.element {
+    width: 100px;
+    height: 100px;
+    animation: change-color 1.5s linear infinite;
+}
+      
+@keyframes change-color {
+    from { background: red; }  /* Primer fotograma */
+    to { background: green; }  /* Segundo y último fotograma */
+}
+
+/*Persona caminando*/
+.bernard {
+  width: 112px;
+  height: 156px;
+  background: url("bernard-bernoulli.png");
+  animation: walk 0.75s infinite steps(6);
+}
+
+@keyframes walk {
+  from { background-position: 0 0; }
+  to { background-position: -672px 0; }
+}
+
