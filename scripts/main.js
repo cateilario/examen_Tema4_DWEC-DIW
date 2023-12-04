@@ -28,10 +28,10 @@ const carObject = {
     displacement: '2400'
 }
 
-// Guardar objeto
+// Guardar objeto, convirtiéndolo a string
 localStorage.setItem("vehiculo", JSON.stringify(carObject));
 
-// Recuperación objeto
+// Recuperación objeto, convirtiéndolo otra vez a Objeto
 console.log(JSON.parse(localStorage.getItem("vehiculo")));
 
 // Creación instancia de Coche Deportivo:
@@ -61,15 +61,16 @@ const sportiveCarObject = {
     enginePower: sportiveCar1.enginePower
 }
 
+// Bucle para recorrer el objeto sportiveCarObject
 for (let key in sportiveCarObject) {
     if(sportiveCarObject.hasOwnProperty(key)) { 
-        localStorage.setItem(key, sportiveCarObject[key]);
+        localStorage.setItem(key, JSON.stringify(sportiveCarObject[key]));
     }
 }
 
 // Eliminación propiedades del localStorage:
-localStorage.removeItem("color");
-localStorage.removeItem("creation");
+localStorage.removeItem('color');
+localStorage.removeItem('creation');
 
 // Limpiar localStorage
-localStorage.clear()
+// localStorage.clear()
