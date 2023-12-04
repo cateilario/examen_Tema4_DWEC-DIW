@@ -15,6 +15,7 @@ export class Car {
         this.#displacement = displacement;
     }
 
+    // Métodos propios
     showDetails (){
         const data = ` 
             Marca: ${this.#brand} <br/>
