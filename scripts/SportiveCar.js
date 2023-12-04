@@ -22,6 +22,7 @@ export class SportiveCar extends Car {
         this.#enginePower = value;
     }
 
+    // Sobreescribimos método showDetails
     showDetails(){
         // Método showDetails de la clase padre Car
         super.showDetails();
